@@ -1,0 +1,108 @@
+html{
+	height:100%;
+	width:100%;
+}
+
+body{
+	height:100%;
+	width:100%;
+	background-color: #FFFFFF;
+	font-family: Verdana;
+}
+#header{
+	background-color: #F1F2F2;
+}
+h1{
+	color: #59D0DB;
+	margin-left: 20px;
+	display: inline-block;
+}
+
+h1> span{
+	color: #FF9933;
+}
+#logout{
+	margin: 25px 0px 0px 780px;
+	height: 30px;
+	position: absolute;
+	width: 100px;
+	font-size: medium;
+	background-color: #59D0DB;
+	color: white;
+}
+#registration{
+	margin: 0px 400px 0px 400px;
+}
+#personalInfo{
+	margin: 40px 0px 10px 0px;
+	color: black;
+}
+#firstName{
+	margin-top: 10px;
+	height: 44px;
+	width: 469px;
+	font-size: large;
+}
+#lastName{
+	margin-top: 10px;
+	height: 44px;
+	width: 469px;
+	font-size: large;
+}
+#phoneNumber{
+	margin-top: 10px;
+	height: 44px;
+	width: 469px;
+	font-size: large;
+}
+#email{
+	margin-top: 10px;
+	height: 44px;
+	width: 469px;
+	font-size: large;
+}
+#loginInfo{
+	margin: 10px 0px 10px 0px;
+	color: black;
+}
+#user{
+	margin-top: 10px;
+	height: 44px;
+	width: 469px;
+	font-size: large;
+}
+#pass{
+	margin-top: 10px;
+	height: 44px;
+	width: 469px;
+	font-size: large;
+}
+textarea{
+	width: 469px;
+	height: 70px;
+	margin-top: 10px;
+	font-size: larger;
+}
+#ccInfo{
+	margin: 10px 0px 10px 0px;
+	color: black;
+}
+#creditCard{
+	margin-top: 10px;
+	height: 44px;
+	width: 340px;
+	font-size: large;
+}
+#month{
+	width: 120px;
+	margin: -30px 0px 0px 350px;
+}
+#submitInfo{
+	width: 469px;
+	height: 36px;
+	background-color: #59D0DB;
+	font-size: larger;
+	margin: 10px 0px 0px 0px;
+	color: white;
+}
+

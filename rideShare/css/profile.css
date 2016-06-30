@@ -1,0 +1,96 @@
+html{
+	height:100%;
+	width:100%;
+}
+
+body{
+	height:100%;
+	width:100%;
+	background-color: #FFFFFF;
+	font-family: Verdana;
+}
+#header{
+	background-color: #F1F2F2;
+}
+h1{
+	color: #59D0DB;
+	margin-left: 20px;
+	display: inline-block;
+}
+
+h1> span{
+	color: #FF9933;
+}
+#logout{
+	margin: 25px 0px 0px 780px;
+	height: 30px;
+	position: absolute;
+	width: 100px;
+	font-size: medium;
+	background-color: #59D0DB;
+	color: white;
+}
+#profilePic{
+	margin: 30px 0px 0px 50px;
+	height: 250px;	
+}
+#name{
+	position: absolute;
+	margin: -200px 0px 0px 350px;
+	font-size: xx-large;
+	color: #59D0DB;
+}
+#offerRide{
+	margin: 50px 0px 0px 300px;
+	height: 60px;
+	width: 300px;
+	font-size: xx-large;
+	background-color: #FF9933;
+	color: white;
+}
+
+#needRide{
+	margin: -60px 0px 0px 700px;
+	height: 60px;
+	width: 300px;
+	font-size: xx-large;
+	background-color: #59D0DB;
+	color: white;
+}
+
+#activeRequest{
+	color: black;
+	margin: 50px 0px 0px 50px;
+}
+
+#about{
+	margin: -150px 0px 0px 353px;
+	position: absolute;
+}
+
+#sentence{
+	position: absolute;
+	margin: -120px 200px 0px 352px;
+}
+form{
+	display: inline-block;
+
+}
+ul{
+	display: inline-block;
+}
+li{
+	text-decoration: none;
+}
+.activeRideRequests button{
+	margin-left: 25px;
+}
+#rideOffer h3{
+	margin: -113px 0px 0px 800px;
+}
+#rideOffer ul li{
+	margin-left: 700px;
+}
+#rideOffer button{
+	margin-left: 25px;
+}

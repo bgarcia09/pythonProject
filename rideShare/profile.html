@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    	<title>Ride Share Profile</title>
+    	<link rel="stylesheet" type="text/css" href="css/profile.css">
+    	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   		 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    	<script type="text/javascript">
+    	</script>
+	</head>
+	<body>
+		<div class="container">
+			<div id="header">
+        		<h1>RIDE <span>SHARE</span></h1>
+        		<button id="logout">Log Out</button>
+      		</div>
+      		<div id="page">
+				<div id="profile">
+					<img id="profilePic" src="img/smallcancel.png">
+					<p id="name">Billy Bob</p>
+					<p id="about">About</p>
+					<p id="sentence">From Texas. Moved to LA for work. Dont have a car, so hoping to find a commute buddy to get to work.</p>
+				</div>				
+					<button id="offerRide">Offer a Ride</button>			
+					<button id="needRide">Need a Ride</button>
+				<div id="rideRequest">
+					<form action="" method="post">
+						<h3 id="activeRequest">Active Ride Requests:</h3>
+						<ul class="activeRideRequests">
+							<li>Palmdale to Downtown Los Angeles July 1 7am<button>Delete</button><button>View</button></li>
+							<li>Valenica to Santa Monica July 3 7am<button>Delete</button><button>View</button></li>
+						</ul>
+					</form>
+				</div>
+				<div id="rideOffer">
+					<form id="activeRideOffers" action="" method="post">
+					<h3>Active Ride Offers:</h3>
+					<ul class="rideOffers">
+						<li>Valencia to Encino July 15 10am<button>Delete</button><button>View</button></li>
+					</ul>
+				</form>
+				</div>	
+			</div>
+		</div>
+	</body>
+</html>
