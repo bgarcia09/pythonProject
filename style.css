@@ -178,6 +178,7 @@ p{
 	top: 50px;
 }
 #offerInfo{
+	/*border: 1px solid black;*/
 	margin: 0px 400px 0px 400px;
 }
 #postRide{
@@ -201,6 +202,12 @@ p{
 	width: 449px;
 	padding: 10px 10px;
 }
+#dateTime{
+	margin-bottom: -30px;
+}
+.datepicker{
+	margin: 5px 0px 25px 0px;
+}
 #datepicker{
 	margin: 5px 0px 25px 0px;
 	height: 36px;
@@ -215,27 +222,37 @@ p{
 	width: 117px;
 	height: 56px;
 }
+#spaces{
+	position: absolute;
+	display: inline-block;
+}
 #seats{
 	height: 36px;
 	width: 150px;
+	margin-top: 10px;
+}
+#cost{
+	display: inline-block;
 }
 #pricePerSeat{
 	position: absolute;
-	margin: -17px 0px 0px 20px;
+	margin: -17px 0px 0px 180px;
 }
 #price{
 	height: 36px;
 	width: 150px;
-	margin: 5px 0px 0px 19px;
+	margin: 5px 0px 0px 180px;
 	padding: 0px 0px 0px 10px;
 	font-size: medium;
 }
+#description{
+	display: inline-block;
+}
 #tripDescription{
-	margin: 0px 0px 0px 0px;
+	position: absolute;
+	margin: 55px 0px 0px -330px;
 }
 #commuteDescription{
-	position: absolute;
-	margin: 30px 0px 0px -134px;
 	width: 470px;
 	height: 80px;
 }
@@ -244,5 +261,73 @@ p{
 	height: 36px;
 	background-color: #59D0DB;
 	font-size: larger;
-	margin: 100px 0px 0px 0px;
+	margin: 30px 0px 0px 0px;
+}
+#registration{
+	margin: 0px 400px 0px 400px;
+}
+#personalInfo{
+	margin: 40px 0px 10px 0px;
+	color: black;
+}
+#firstName{
+	margin-top: 10px;
+	height: 44px;
+	width: 469px;
+	font-size: large;
+}
+#lastName{
+	margin-top: 10px;
+	height: 44px;
+	width: 469px;
+	font-size: large;
+}
+#phoneNumber{
+	margin-top: 10px;
+	height: 44px;
+	width: 469px;
+	font-size: large;
+}
+#email{
+	margin-top: 10px;
+	height: 44px;
+	width: 469px;
+	font-size: large;
+}
+#loginInfo{
+	margin: 10px 0px 10px 0px;
+	color: black;
+}
+#user{
+	margin-top: 10px;
+	height: 44px;
+	width: 469px;
+	font-size: large;
+}
+#pass{
+	margin-top: 10px;
+	height: 44px;
+	width: 469px;
+	font-size: large;
+}
+#ccInfo{
+	margin: 10px 0px 10px 0px;
+	color: black;
+}
+#creditCard{
+	margin-top: 10px;
+	height: 44px;
+	width: 300px;
+	font-size: large;
+}
+#month{
+	width: 117px;
+	height: 56px;
+}
+#submitInfo{
+	width: 469px;
+	height: 36px;
+	background-color: #59D0DB;
+	font-size: larger;
+	margin: 10px 0px 0px 0px;
 }

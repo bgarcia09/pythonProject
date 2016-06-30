@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Post a Ride</title>
+		<title>Registration</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -15,27 +15,39 @@
 		    <button id="logout">Log Out</button>
 		</div>
 		<div id="registration">
-			First Name: <input id="firstName" type="text" value="First_Name" placeholder="First Name">
-			Last Name: <input id="lastName" type="text" value="Last_Name" placeholder="Last Name">
-			Phone Number: <input id="phoneNumber" type="text" value="Phone_Number" placeholder="Phone Number">
-			Email: <input id="email" type="text" value="Email" placeholder="Email">
-			Username: <input id="user" type="text" value="username" placeholder="Username">
-			Password: <input id="pass" type="text" value="password" placeholder="Password">
-			Credit Card: <input id="creditCard" type="text" value="Credit_Card" placeholder="Credit Card">
-			<select id="month">
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-				<option value="6">6</option>
-				<option value="7">7</option>
-				<option value="8">8</option>
-				<option value="9">9</option>
-				<option value="10">10</option>
-				<option value="11">11</option>
-				<option value="12">12</option>
-			</select>
+			<p id="personalInfo">Personal Information</p>
+			<form id="newUser" action="" method="Post">
+				<input class="text_input" id="firstName" type="text" placeholder="First Name">
+				<input class="text_input" id="lastName" type="text" placeholder="Last Name">
+				<input class="text_input" id="phoneNumber" type="text" placeholder="Phone Number">
+				<input class="text_input" id="email" type="text" placeholder="Email">
+			</form>
+			<p id="loginInfo"> Login Information</p>
+			<form id="userInfo" action="" method="Post">
+				<input class="text_input" id="user" type="text" placeholder="Username">
+				<input class="text_input" id="pass" type="text" placeholder="Password" >
+			</form>
+			<p id="ccInfo">Credit Card Information</p>
+			<form id="creditCardInfo" action="" method="Post">
+				<input class="text_input" id="creditCard" type="text" placeholder="Credit Card">
+				<select id="month">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+				</select>
+			</form>
+			<form id="submitRegistration" action="" method="Post">
+				<button id="submitInfo" type="submit" value="Submit"/></button>
+			</form>
 		</div>
 	</body>
 </html>
