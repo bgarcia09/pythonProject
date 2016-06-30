@@ -4,6 +4,45 @@
 		<meta charset="UTF-8">
 		<title>Registration</title>
 		<link rel="stylesheet" type="text/css" href="css/registration.css">
+		<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+		<script type="text/javascript">Stripe.setPublishableKey('pk_test_NkiRI9kNgE7QgzrhtEugK6e9');</script>
+		<script>
+		$(function() {
+  		var $form = $('#newUser');
+  		$form.submit(function(event) {
+    // Disable the submit button to prevent repeated clicks:
+    	$form.find('#submitInfo').prop('disabled', true);
+
+    // Request a token from Stripe:
+    	Stripe.card.createToken($form, stripeResponseHandler);
+
+    // Prevent the form from being submitted:
+    	return false;
+  		});
+		});
+		function stripeResponseHandler(status, response) {
+  // Grab the form:
+  var $form = $('#newUser');
+
+  if (response.error) { // Problem!
+
+    // Show the errors on the form:
+    $form.find('.payment-errors').text(response.error.message);
+    $form.find('#submitInfo').prop('disabled', false); // Re-enable submission
+
+  } else { // Token was created!
+
+    // Get the token ID:
+    var token = response.id;
+
+    // Insert the token ID into the form so it gets submitted to the server:
+    $form.append($('<input type="hidden" name="stripeToken">').val(token));
+
+    // Submit the form:
+    $form.get(0).submit();
+  }
+};
+	</script>
 	</head>
 	<body>
 		<div id="container">
@@ -12,7 +51,7 @@
 		    <button id="logout">Log Out</button>
 		</div>
 		<div id="registration">
-			<form id="newUser" action="" method="Post">
+			<form id="newUser" action="/register" method="post">
 				<p id="personalInfo">Personal Information</p>
 				<input class="text_input" id="firstName" type="text" placeholder="First Name">
 				<input class="text_input" id="lastName" type="text" placeholder="Last Name">
@@ -23,21 +62,32 @@
 				<input class="text_input" id="pass" type="text" placeholder="Password">
 				<textarea type="text" placeholder="Tell us about yourself!"></textarea>
 				<p id="ccInfo">Credit Card Information</p>
-				<input class="text_input" id="creditCard" type="text" placeholder="Credit Card">
-				<select id="month">
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-					<option value="9">9</option>
-					<option value="10">10</option>
-					<option value="11">11</option>
-					<option value="12">12</option>
-				</select>
+				<span class="payment-errors"></span>
+
+  				<div class="form-row">
+    				<label>
+      				<span>Card Number</span>
+      				<input type="text" size="20" data-stripe="number">
+    				</label>
+  				</div>
+
+  				<div class="form-row">
+    				<label>
+      				<span>Expiration (MM/YY)</span>
+      				<input type="text" size="2" data-stripe="exp_month">
+    				</label>
+    				<span> / </span>
+    				<input type="text" size="2" data-stripe="exp_year">
+  				</div>
+
+  				<div class="form-row">
+    				<label>
+      				<span>CVC</span>
+      				<input type="text" size="4" data-stripe="cvc">
+    				</label>
+  				</div>
+
+ 
 				<input id="submitInfo" type="submit" value="Submit">
 			</form>
 		</div>
